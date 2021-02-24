@@ -52,7 +52,7 @@ app.get('/showUser', (req, res) => {
 });
 //delete user based on names
 app.delete('/deleteUser', (req, res) => {
-    db.collection('user').deleteOne({ address:req.body.address}, (err, result) => {
+    db.collection('user').deleteOne({ name:req.body.name}, (err, result) => {
         if (err) throw err;
         res.send("deleted");
     });
